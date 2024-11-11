@@ -14,7 +14,7 @@ int main(int argc, const char * argv[]) {
         Fraction *myFraction = [[Fraction alloc] init];
         
         [myFraction setNumerator: 1];
-        [myFraction setDenominator: 3];
+        myFraction.denominator = 3;
         
         NSLog(@"The value of myFraction is: ");
         [myFraction print];
