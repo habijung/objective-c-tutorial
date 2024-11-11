@@ -11,19 +11,26 @@
 int main(int argc, const char * argv[])
 {
     @autoreleasepool {
-        int n, number, triangularNumber;
+        int p, d;
+        BOOL isPrime;
         
-        NSLog(@"What triangular number do you want?");
-        scanf("%i", &number);
-        
-        triangularNumber = 0;
-        
-        for (n = 1; n <= number; ++n)
+        for (p = 2; p <= 50; ++p)
         {
-            triangularNumber += n;
+            isPrime = YES;
+            
+            for (d = 2; d < p; ++d)
+            {
+                if (p % d == 0)
+                {
+                    isPrime = NO;
+                }
+            }
+            
+            if (isPrime == YES)
+            {
+                NSLog(@"%i ", p);
+            }
         }
-        
-        NSLog(@"Triangular number %i is %i\n", number, triangularNumber);
     }
 
     return 0;
