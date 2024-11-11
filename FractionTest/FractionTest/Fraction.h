@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property int numerator, denominator;
 
 -(void) print;
+-(void) setTo: (int) n over: (int) d;
 -(double) convertToNum;
 
 @end

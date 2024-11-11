@@ -16,6 +16,12 @@
     NSLog (@"%i/%i", numerator, denominator);
 }
 
+-(void) setTo: (int) n over: (int) d
+{
+    numerator = n;
+    denominator = d;
+}
+
 -(double) convertToNum
 {
     if (denominator != 0)
