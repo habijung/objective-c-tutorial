@@ -1,6 +1,6 @@
 //
 //  main.m
-//  proj1
+//  ch2
 //
 //  Created by 정하빈 on 11/11/24.
 //
