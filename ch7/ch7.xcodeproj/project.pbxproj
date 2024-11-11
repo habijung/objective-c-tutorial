@@ -19,13 +19,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CE2D7E032CE1D2C700C04128 /* FractionTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FractionTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE2D7E032CE1D2C700C04128 /* ch7 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ch7; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		CE2D7E052CE1D2C700C04128 /* FractionTest */ = {
+		CE2D7E052CE1D2C700C04128 /* ch7 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FractionTest;
+			path = ch7;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -44,7 +44,7 @@
 		CE2D7DFA2CE1D2C700C04128 = {
 			isa = PBXGroup;
 			children = (
-				CE2D7E052CE1D2C700C04128 /* FractionTest */,
+				CE2D7E052CE1D2C700C04128 /* ch7 */,
 				CE2D7E042CE1D2C700C04128 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,7 +52,7 @@
 		CE2D7E042CE1D2C700C04128 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE2D7E032CE1D2C700C04128 /* FractionTest */,
+				CE2D7E032CE1D2C700C04128 /* ch7 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,9 +60,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE2D7E022CE1D2C700C04128 /* FractionTest */ = {
+		CE2D7E022CE1D2C700C04128 /* ch7 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE2D7E0A2CE1D2C700C04128 /* Build configuration list for PBXNativeTarget "FractionTest" */;
+			buildConfigurationList = CE2D7E0A2CE1D2C700C04128 /* Build configuration list for PBXNativeTarget "ch7" */;
 			buildPhases = (
 				CE2D7DFF2CE1D2C700C04128 /* Sources */,
 				CE2D7E002CE1D2C700C04128 /* Frameworks */,
@@ -73,13 +73,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				CE2D7E052CE1D2C700C04128 /* FractionTest */,
+				CE2D7E052CE1D2C700C04128 /* ch7 */,
 			);
-			name = FractionTest;
+			name = ch7;
 			packageProductDependencies = (
 			);
 			productName = FractionTest;
-			productReference = CE2D7E032CE1D2C700C04128 /* FractionTest */;
+			productReference = CE2D7E032CE1D2C700C04128 /* ch7 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +96,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE2D7DFE2CE1D2C700C04128 /* Build configuration list for PBXProject "FractionTest" */;
+			buildConfigurationList = CE2D7DFE2CE1D2C700C04128 /* Build configuration list for PBXProject "ch7" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -110,7 +110,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE2D7E022CE1D2C700C04128 /* FractionTest */,
+				CE2D7E022CE1D2C700C04128 /* ch7 */,
 			);
 		};
 /* End PBXProject section */
@@ -260,7 +260,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE2D7DFE2CE1D2C700C04128 /* Build configuration list for PBXProject "FractionTest" */ = {
+		CE2D7DFE2CE1D2C700C04128 /* Build configuration list for PBXProject "ch7" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE2D7E082CE1D2C700C04128 /* Debug */,
@@ -269,7 +269,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE2D7E0A2CE1D2C700C04128 /* Build configuration list for PBXNativeTarget "FractionTest" */ = {
+		CE2D7E0A2CE1D2C700C04128 /* Build configuration list for PBXNativeTarget "ch7" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE2D7E0B2CE1D2C700C04128 /* Debug */,
