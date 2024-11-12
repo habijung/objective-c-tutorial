@@ -9,9 +9,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class XYPoint;
+
 @interface Rectangle : NSObject
 
 @property int width, height;
+
+-(XYPoint *) origin;
+-(void) setOrigin: (XYPoint *) pt;
 
 -(int) area;
 -(int) perimeter;
