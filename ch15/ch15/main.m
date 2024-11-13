@@ -11,12 +11,11 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSString *aName = @"Name";
-        NSString *aEmail = @"email@email.com";
+        NSString *aName = @"aName";
+        NSString *aEmail = @"aEmail@email.com";
         AddressCard *card1 = [[AddressCard alloc] init];
         
-        [card1 setName: aName];
-        [card1 setEmail: aEmail];
+        [card1 setName:aName andEmail:aEmail];
         [card1 print];
     }
     

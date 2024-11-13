@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 //            경쟁 조건에 대해서 고려할 필요 없음
 @property (copy, nonatomic) NSString *name, *email;
 
+- (void)setName:(NSString *)theName andEmail:(NSString *)theEmail;
 - (void)print;
 
 @end

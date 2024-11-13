@@ -11,6 +11,12 @@
 
 @synthesize name, email;
 
+-(void)setName:(NSString *)theName andEmail:(NSString *)theEmail
+{
+    self.name = theName;
+    self.email = theEmail;
+}
+
 -(void)print
 {
     NSLog(@"===========================");
