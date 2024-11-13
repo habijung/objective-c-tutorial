@@ -24,7 +24,7 @@
     NSLog(@"| %-23s |", [name UTF8String]);
     NSLog(@"| %-23s |", [email UTF8String]);
     NSLog(@"|                         |");
-    NSLog(@"|      0           0      |");
+    NSLog(@"|      O           O      |");
     NSLog(@"===========================");
 }
 
