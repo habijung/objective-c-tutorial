@@ -809,8 +809,8 @@
                                         </tableColumn>
                                     </tableColumns>
                                     <connections>
-                                        <outlet property="dataSource" destination="8Vr-Pg-hU7" id="fMd-6t-cbc"/>
-                                        <outlet property="delegate" destination="8Vr-Pg-hU7" id="Eaf-vI-Bux"/>
+                                        <outlet property="dataSource" destination="jpv-Yb-n5d" id="EIp-Ab-p4s"/>
+                                        <outlet property="delegate" destination="jpv-Yb-n5d" id="fRx-DL-8oV"/>
                                     </connections>
                                 </tableView>
                             </subviews>
@@ -868,6 +868,5 @@
             </connections>
             <point key="canvasLocation" x="199" y="415"/>
         </window>
-        <customObject id="8Vr-Pg-hU7" customClass="TableViewController"/>
     </objects>
 </document>

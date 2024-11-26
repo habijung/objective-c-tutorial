@@ -13,7 +13,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MainWindowController : NSObject
+@interface MainWindowController : NSObject <NSTableViewDataSource, NSTableViewDelegate>
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView;
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row;
 
 @end
 
