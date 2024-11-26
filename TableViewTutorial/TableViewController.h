@@ -10,8 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TableViewController : NSObject <NSTableViewDataSource, NSTableViewDelegate>
-{
+@interface TableViewController : NSObject <NSTableViewDataSource, NSTableViewDelegate> {
     __weak IBOutlet NSButton *addButton;
     __weak IBOutlet NSButton *showButton;
     __weak IBOutlet NSButton *deleteButton;

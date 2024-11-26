@@ -9,8 +9,7 @@
 
 @implementation TableViewModel
 
-- (id)init
-{
+- (id)init {
     self = [super self];
     
     NSLog(@"TableObject init");

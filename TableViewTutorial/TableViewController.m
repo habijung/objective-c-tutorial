@@ -10,8 +10,7 @@
 
 @implementation TableViewController
 
-- (id)init
-{
+- (id)init {
     self = [super init];
 
     NSLog(@"TableViewController init");
@@ -28,47 +27,36 @@
 
 #pragma mark - Actions
 
-- (IBAction)addButtonClicked:(NSButton *)sender
-{
+- (IBAction)addButtonClicked:(NSButton *)sender {
     NSLog(@"addButtonClicked");
 }
 
-- (IBAction)showButtonClicked:(NSButton *)sender
-{
+- (IBAction)showButtonClicked:(NSButton *)sender {
     NSLog(@"showButtonClicked");
 }
 
-- (IBAction)deleteButtonClicked:(NSButton *)sender
-{
+- (IBAction)deleteButtonClicked:(NSButton *)sender {
     NSLog(@"deleteButtonClicked");
 }
 
 #pragma mark - Protocols
 
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
-{
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
     return [_tableData count];
 }
 
-- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
-{
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NSString *identifier = tableColumn.identifier;
     NSTableCellView *cell = [tableView makeViewWithIdentifier:identifier owner:self];
     
-    if (!_tableData)
-    {
+    if (!_tableData) {
         TableViewModel *modelOfRow = [_tableData objectAtIndex:row];
         
-        if ([identifier isEqualToString:@"No"])
-        {
+        if ([identifier isEqualToString:@"No"]) {
             cell.textField.intValue = modelOfRow.index;
-        }
-        else if ([identifier isEqualToString:@"Title"])
-        {
+        } else if ([identifier isEqualToString:@"Title"]) {
             cell.textField.stringValue = modelOfRow.title;
-        }
-        else
-        {
+        } else {
             cell.textField.stringValue = @"Date";
         }
     }
