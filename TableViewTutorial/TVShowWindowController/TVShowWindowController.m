@@ -58,6 +58,10 @@
 
 - (IBAction)editButtonClicked:(NSButton *)sender {
     NSLog(@"log: TVShowWindowController: editButtonClicked:");
+    
+    // Sent title, content, date string to Main Window
+    [self.delegate showWindowWillSendTitle:titleTextField.stringValue content:contentTextField.stringValue];
+    [self close];
 }
 
 - (IBAction)closeButtonClicked:(NSButton *)sender {

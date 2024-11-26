@@ -39,7 +39,7 @@
 - (IBAction)completeButtonClicked:(NSButton *)sender {
     NSLog(@"log: TVAddWindowController: Complete Button Clicked");
     
-    // Send title and content to MainWindow
+    // Send title and content to Main Window
     [self.delegate addWindowWillSendTitle:titleTextField.stringValue content:contentTextField.stringValue];
     [self close];
 }

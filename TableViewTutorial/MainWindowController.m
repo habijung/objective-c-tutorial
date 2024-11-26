@@ -135,19 +135,12 @@
     model.title = title;
     model.content = content;
     
-    // TODO: Create date string method
     NSDate *date = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     
     model.dateString = [dateFormatter stringFromDate:date];
-    
-    // TODO: Create print model method
-    NSLog(@"New model index: %i", model.index);
-    NSLog(@"New model title: %@", model.title);
-    NSLog(@"New model content: %@", model.content);
-    NSLog(@"New model date: %@", model.dateString);
     
     [_tableViewData addObject:model];
     [tableView reloadData];
@@ -157,6 +150,29 @@
 
 - (void)showWindowWillClose {
     tvShowWindowController = nil;
+}
+
+- (void)showWindowWillSendTitle:(NSString *)title content:(NSString *)content {
+    if ([title isEqualToString:@""]) {
+        title = @"(No Title)";
+    }
+    
+    if ([content isEqualToString:@""]) {
+        content = @"(No Content)";
+    }
+    
+    TableViewModel *model = [_tableViewData objectAtIndex:tableView.selectedRow];
+    model.title = title;
+    model.content = content;
+    
+    NSDate *date = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    
+    model.dateString = [dateFormatter stringFromDate:date];
+    
+    [tableView reloadData];
 }
 
 @end

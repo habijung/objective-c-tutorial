@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol TVShowWindowControllerDelegate <NSObject>
 
 - (void)showWindowWillClose;
+- (void)showWindowWillSendTitle:(NSString *)title content:(NSString *)content;
 
 @end
 
