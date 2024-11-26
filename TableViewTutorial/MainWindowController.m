@@ -18,7 +18,7 @@
     __weak IBOutlet NSTableView *tableView;
 }
 
-@property (nonatomic, strong) NSMutableArray *tableViewData;
+@property (nonatomic, strong) NSMutableArray *modelArray;
 
 - (IBAction)addButtonClicked:(NSButton *)sender;
 - (IBAction)showButtonClicked:(NSButton *)sender;
@@ -36,23 +36,23 @@
     model.title = @"Sample Title";
     model.content = @"Sample Content";
     
-    _tableViewData = [[NSMutableArray alloc] init];
-    [_tableViewData addObject:model];
+    _modelArray = [[NSMutableArray alloc] init];
+    [_modelArray addObject:model];
 
     return self;
 }
 
 #pragma mark - Table View Control
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return [_tableViewData count];
+    return [_modelArray count];
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NSString *identifier = tableColumn.identifier;
     NSTableCellView *cell = [tableView makeViewWithIdentifier:identifier owner:self];
     
-    if (_tableViewData) {
-        TableViewModel *modelOfRow = [_tableViewData objectAtIndex:row];
+    if (_modelArray) {
+        TableViewModel *modelOfRow = [_modelArray objectAtIndex:row];
         
         if ([identifier isEqualToString:@"No"]) {
             cell.textField.intValue = modelOfRow.index;
@@ -83,7 +83,7 @@
             tvShowWindowController.delegate = self;
             
             int tableViewIndex = (int)tableView.selectedRow;
-            TableViewModel *model = [_tableViewData objectAtIndex:tableViewIndex];
+            TableViewModel *model = [_modelArray objectAtIndex:tableViewIndex];
             
             [tvShowWindowController showSelectedRow:model.title content:model.content];
             [tvShowWindowController showWindow:nil];
@@ -95,10 +95,10 @@
     if (tableView.selectedRow != -1) {
         int tableViewIndex = (int)tableView.selectedRow;
         
-        [_tableViewData removeObjectAtIndex:tableViewIndex];
+        [_modelArray removeObjectAtIndex:tableViewIndex];
         
-        for (NSInteger i = tableViewIndex; i < _tableViewData.count; i++) {
-            TableViewModel *model = [_tableViewData objectAtIndex:i];
+        for (NSInteger i = tableViewIndex; i < _modelArray.count; i++) {
+            TableViewModel *model = [_modelArray objectAtIndex:i];
             model.index = (int)i + 1;
         }
         
@@ -122,7 +122,7 @@
     }
     
     TableViewModel *model = [[TableViewModel alloc] init];
-    model.index = (int)[_tableViewData count] + 1;
+    model.index = (int)[_modelArray count] + 1;
     model.title = title;
     model.content = content;
     
@@ -133,7 +133,7 @@
     
     model.dateString = [dateFormatter stringFromDate:date];
     
-    [_tableViewData addObject:model];
+    [_modelArray addObject:model];
     [tableView reloadData];
 }
 
@@ -152,7 +152,7 @@
         content = @"(No Content)";
     }
     
-    TableViewModel *model = [_tableViewData objectAtIndex:tableView.selectedRow];
+    TableViewModel *model = [_modelArray objectAtIndex:tableView.selectedRow];
     model.title = title;
     model.content = content;
     
