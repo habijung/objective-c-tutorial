@@ -94,10 +94,14 @@
     
     if (tableView.selectedRow != -1) {
         int tableViewIndex = (int)tableView.selectedRow;
-        NSLog(@"Table View Index: %i", tableViewIndex);
         
-        // TODO: Reset remain objects index
         [_tableViewData removeObjectAtIndex:tableViewIndex];
+        
+        for (NSInteger i = tableViewIndex; i < _tableViewData.count; i++) {
+            TableViewModel *model = [_tableViewData objectAtIndex:i];
+            model.index = (int)i + 1;
+        }
+        
         [tableView reloadData];
     }
 }
