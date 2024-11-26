@@ -9,8 +9,6 @@
 
 @implementation TableViewModel
 
-@synthesize ID, title;
-
 - (id)init
 {
     self = [super self];

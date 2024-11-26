@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TableViewModel : NSObject
 
-@property int ID;
+@property int index;
 @property NSString *title;
 
 @end

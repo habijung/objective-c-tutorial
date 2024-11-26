@@ -16,32 +16,17 @@
 
     NSLog(@"TableViewController init");
     
-    /*
-    // Create table objects array
-    _tableObjects = [[NSMutableArray alloc] init];
-
-    // Create initial table object
-    TableViewModel *object = [[TableViewModel alloc] init];
-    object.ID = 123;
-    object.title = @"Object 123";
-
-    // Add object to array
-    [_tableObjects addObject:object];
-     */
+    TableViewModel *model = [[TableViewModel alloc] init];
+    model.index = 123;
+    model.title = @"Title 123";
     
-    // Test for Table View Cell
-    _tableNo = [[NSMutableArray alloc] init];
-    _tableTitle = [[NSMutableArray alloc] init];
-    _tableDate = [[NSMutableArray alloc] init];
-    
-    [_tableNo addObject:@"1"];
-    [_tableTitle addObject:@"Title 1"];
-    [_tableDate addObject:@"2024/11/19"];
+    _tableData = [[NSMutableArray alloc] init];
+    [_tableData addObject:model];
 
     return self;
 }
 
-#pragma mark -
+#pragma mark - Actions
 
 - (IBAction)addButtonClicked:(NSButton *)sender
 {
@@ -58,11 +43,11 @@
     NSLog(@"deleteButtonClicked");
 }
 
-#pragma mark -
+#pragma mark - Protocols
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {
-    return [_tableNo count];
+    return [_tableData count];
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
@@ -70,16 +55,22 @@
     NSString *identifier = tableColumn.identifier;
     NSTableCellView *cell = [tableView makeViewWithIdentifier:identifier owner:self];
     
-    // TODO: Check NULL
-    if ([identifier isEqualToString:@"No"])
+    if (!_tableData)
     {
-        cell.textField.stringValue = [_tableNo objectAtIndex:row];
-    } else if ([identifier isEqualToString:@"Title"])
-    {
-        cell.textField.stringValue = [_tableTitle objectAtIndex:row];
-    } else
-    {
-        cell.textField.stringValue = [_tableDate objectAtIndex:row];
+        TableViewModel *modelOfRow = [_tableData objectAtIndex:row];
+        
+        if ([identifier isEqualToString:@"No"])
+        {
+            cell.textField.intValue = modelOfRow.index;
+        }
+        else if ([identifier isEqualToString:@"Title"])
+        {
+            cell.textField.stringValue = modelOfRow.title;
+        }
+        else
+        {
+            cell.textField.stringValue = @"Date";
+        }
     }
     
     return cell;
