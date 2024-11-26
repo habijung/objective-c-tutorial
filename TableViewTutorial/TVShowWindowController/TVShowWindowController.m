@@ -7,7 +7,13 @@
 
 #import "TVShowWindowController.h"
 
-@interface TVShowWindowController ()
+@interface TVShowWindowController () {
+    
+    __weak IBOutlet NSButton *editButton;
+    __weak IBOutlet NSButton *closeButton;
+}
+- (IBAction)editButtonClicked:(NSButton *)sender;
+- (IBAction)closeButtonClicked:(NSButton *)sender;
 
 @end
 
@@ -24,6 +30,14 @@
     [super windowDidLoad];
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+}
+
+- (IBAction)editButtonClicked:(NSButton *)sender {
+    NSLog(@"log: TVShowWindowController: editButtonClicked:");
+}
+
+- (IBAction)closeButtonClicked:(NSButton *)sender {
+    NSLog(@"log: TVShowWindowController: closeButtonClicked:");
 }
 
 @end

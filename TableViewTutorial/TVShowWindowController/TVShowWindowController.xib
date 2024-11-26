@@ -49,6 +49,28 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaH-Da-Epm">
+                        <rect key="frame" x="327" y="13" width="57" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="닫기" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uc8-1d-kgS">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="closeButtonClicked:" target="-2" id="qX3-NP-dMT"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEf-KQ-bv6">
+                        <rect key="frame" x="270" y="13" width="57" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="수정" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5hy-XO-iqR">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="editButtonClicked:" target="-2" id="4FT-GM-7FP"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <connections>
