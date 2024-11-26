@@ -12,7 +12,7 @@
 - (id)init {
     self = [super self];
     
-    NSLog(@"TableObject init");
+    NSLog(@"init: TableObject");
     
     return self;
 }

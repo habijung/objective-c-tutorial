@@ -6,14 +6,14 @@
 //
 
 #import "TableViewController.h"
-#import "TableViewModel.h"
+#import "Model/TableViewModel.h"
 
 @implementation TableViewController
 
 - (id)init {
     self = [super init];
 
-    NSLog(@"TableViewController init");
+    NSLog(@"init: TableViewController");
     
     TableViewModel *model = [[TableViewModel alloc] init];
     model.index = 123;
