@@ -64,6 +64,15 @@
 
 - (void)addWindowWillSendTitle:(NSString *)title content:(NSString *)content {
     NSLog(@"log: MainWindowController: addWindowWillSendTitle:content:");
+    
+    if ([title isEqualToString:@""]) {
+        title = @"(No Title)";
+    }
+    
+    if ([content isEqualToString:@""]) {
+        content = @"(No Content)";
+    }
+    
     NSLog(@"%@", title);
     NSLog(@"%@", content);
 }
