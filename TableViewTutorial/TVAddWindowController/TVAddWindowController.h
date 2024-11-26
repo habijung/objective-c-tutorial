@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol TVAddWindowControllerDelegate <NSObject>
 
 - (void)addWindowWillClose;
-- (void)contentWillAdd;
+- (void)addWindowWillReturnTitle:(NSString *)title content:(NSString *)content;
 
 @end
 

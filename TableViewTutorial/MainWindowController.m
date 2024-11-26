@@ -62,8 +62,10 @@
     tvAddWindowController = nil;
 }
 
-- (void)contentWillAdd {
+- (void)addWindowWillReturnTitle:(NSString *)title content:(NSString *)content {
     NSLog(@"log: MainWindowController: contentWillAdd");
+    NSLog(@"%@", title);
+    NSLog(@"%@", content);
 }
 
 @end

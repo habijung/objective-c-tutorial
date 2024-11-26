@@ -22,8 +22,8 @@
     
     TableViewModel *model = [[TableViewModel alloc] init];
     model.index = 1;
-    model.title = @"Title 1";
-    model.content = @"Content 1";
+    model.title = @"Sample title";
+    model.content = @"Sample content";
     
     _tableData = [[NSMutableArray alloc] init];
     [_tableData addObject:model];
