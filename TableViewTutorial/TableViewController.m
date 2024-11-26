@@ -1,13 +1,13 @@
 //
-//  MainWindow.m
+//  TableViewController.m
 //  TableViewTutorial
 //
 //  Created by 정하빈 on 11/18/24.
 //
 
-#import "MainWindow.h"
+#import "TableViewController.h"
 
-@implementation MainWindow
+@implementation TableViewController
 
 - (IBAction)addButtonClicked:(NSButton *)sender
 {

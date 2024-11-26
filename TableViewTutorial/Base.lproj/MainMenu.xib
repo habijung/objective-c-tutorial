@@ -19,7 +19,7 @@
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <customObject id="jpv-Yb-n5d" customClass="MainWindow">
+        <customObject id="jpv-Yb-n5d" customClass="TableViewController">
             <connections>
                 <outlet property="addButton" destination="bLd-Mo-2B0" id="a4u-Px-wmv"/>
                 <outlet property="deleteButton" destination="XjU-AO-bOq" id="jF6-fQ-BPo"/>
@@ -788,11 +788,11 @@
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <prototypeCellViews>
                                                 <tableCellView id="QyH-mq-dF6">
-                                                    <rect key="frame" x="454" y="0.0" width="150" height="24"/>
+                                                    <rect key="frame" x="454" y="0.0" width="149" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8UL-SR-bxR">
-                                                            <rect key="frame" x="0.0" y="4" width="150" height="16"/>
+                                                            <rect key="frame" x="0.0" y="4" width="149" height="16"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="j6E-QT-7gP">
                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -829,7 +829,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="글 추가" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5dW-ae-TQK">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                            <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
                             <action selector="addButtonClicked:" target="jpv-Yb-n5d" id="9lq-Cw-4aY"/>
@@ -840,7 +840,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="선택 보기" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PO8-p0-Gq3">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                            <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
                             <action selector="showButtonClicked:" target="jpv-Yb-n5d" id="tYh-Q5-LCe"/>
@@ -851,7 +851,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="선택 삭제" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="j88-ns-vXH">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                            <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
                             <action selector="deleteButtonClicked:" target="jpv-Yb-n5d" id="mSe-Wg-XYT"/>

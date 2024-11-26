@@ -1,5 +1,5 @@
 //
-//  MainWindow.h
+//  TableViewController.h
 //  TableViewTutorial
 //
 //  Created by 정하빈 on 11/18/24.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MainWindow : NSObject
+@interface TableViewController : NSObject
 {
     __weak IBOutlet NSButton *addButton;
     __weak IBOutlet NSButton *showButton;
