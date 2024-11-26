@@ -35,7 +35,9 @@
 }
 
 - (IBAction)completeButtonClicked:(NSButton *)sender {
-    NSLog(@"log : TVAddWindowController: Complete Button Clicked");
+    NSLog(@"log: TVAddWindowController: Complete Button Clicked");
+    [self.delegate contentWillAdd];
+    [self close];
 }
 
 @end

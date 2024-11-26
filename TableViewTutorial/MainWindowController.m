@@ -33,7 +33,7 @@
 }
 
 - (IBAction)addButtonClicked:(NSButton *)sender {
-    NSLog(@"log : MainWindowController: Add Button Clicked");
+    NSLog(@"log: MainWindowController: Add Button Clicked");
     
     if (!tvAddWindowController) {
         tvAddWindowController = [[TVAddWindowController alloc] initWithWindowNibName:[TVAddWindowController className]];
@@ -43,7 +43,7 @@
 }
 
 - (IBAction)showButtonClicked:(NSButton *)sender {
-    NSLog(@"log : MainWindowController: Show Button Clicked");
+    NSLog(@"log: MainWindowController: Show Button Clicked");
     
     if (!tvShowWindowController) {
         tvShowWindowController = [[TVShowWindowController alloc] initWithWindowNibName:[TVShowWindowController className]];
@@ -53,13 +53,17 @@
 }
 
 - (IBAction)deleteButtonClicked:(NSButton *)sender {
-    NSLog(@"log : MainWindowController: Delete Button Clicked");
+    NSLog(@"log: MainWindowController: Delete Button Clicked");
 }
 
 #pragma mark - TVAddWindowControllerDelegate
 
 - (void)addWindowWillClose {
     tvAddWindowController = nil;
+}
+
+- (void)contentWillAdd {
+    NSLog(@"log: MainWindowController: contentWillAdd");
 }
 
 @end
