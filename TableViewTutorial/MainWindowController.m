@@ -87,7 +87,10 @@
             tvShowWindowController = [[TVShowWindowController alloc] initWithWindowNibName:[TVShowWindowController className]];
             tvShowWindowController.delegate = self;
             
-            [tvShowWindowController showSelectedRow:@"AAA" content:@"BBB"];
+            int tableViewIndex = (int)tableView.selectedRow;
+            TableViewModel *model = [_tableViewData objectAtIndex:tableViewIndex];
+            
+            [tvShowWindowController showSelectedRow:model.title content:model.content];
             [tvShowWindowController showWindow:nil];
         }
     }
