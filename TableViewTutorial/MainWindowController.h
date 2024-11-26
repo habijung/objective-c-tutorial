@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MainWindowController : NSObject <NSTableViewDataSource, NSTableViewDelegate> {
+@interface MainWindowController : NSObject {
     TVAddWindowController *tvAddWindowController;
     TVShowWindowController *tvShowWindowController;
     
@@ -22,17 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
     __weak IBOutlet NSButton *deleteButton;
 }
 
-@property(nonatomic, strong) NSMutableArray *tableData;
-
-#pragma mark - Actions
 - (IBAction)addButtonClicked:(NSButton *)sender;
 - (IBAction)showButtonClicked:(NSButton *)sender;
 - (IBAction)deleteButtonClicked:(NSButton *)sender;
-
-#pragma mark - Protocols
-
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView;
-- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row;
 
 @end
 

@@ -13,19 +13,6 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
-            <connections>
-                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
-            </connections>
-        </customObject>
-        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <customObject id="jpv-Yb-n5d" customClass="MainWindowController">
-            <connections>
-                <outlet property="addButton" destination="bLd-Mo-2B0" id="a4u-Px-wmv"/>
-                <outlet property="deleteButton" destination="XjU-AO-bOq" id="jF6-fQ-BPo"/>
-                <outlet property="showButton" destination="SIT-5Y-GpL" id="Fqu-GR-Dlc"/>
-            </connections>
-        </customObject>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="TableViewTutorial" id="1Xt-HY-uBw">
@@ -688,6 +675,19 @@
             </items>
             <point key="canvasLocation" x="200" y="121"/>
         </menu>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+            <connections>
+                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="jpv-Yb-n5d" customClass="MainWindowController">
+            <connections>
+                <outlet property="addButton" destination="bLd-Mo-2B0" id="a4u-Px-wmv"/>
+                <outlet property="deleteButton" destination="XjU-AO-bOq" id="jF6-fQ-BPo"/>
+                <outlet property="showButton" destination="SIT-5Y-GpL" id="Fqu-GR-Dlc"/>
+            </connections>
+        </customObject>
         <window title="Main Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -809,8 +809,8 @@
                                         </tableColumn>
                                     </tableColumns>
                                     <connections>
-                                        <outlet property="dataSource" destination="jpv-Yb-n5d" id="eiS-d8-4ey"/>
-                                        <outlet property="delegate" destination="jpv-Yb-n5d" id="hmL-Mb-vrJ"/>
+                                        <outlet property="dataSource" destination="8Vr-Pg-hU7" id="fMd-6t-cbc"/>
+                                        <outlet property="delegate" destination="8Vr-Pg-hU7" id="Eaf-vI-Bux"/>
                                     </connections>
                                 </tableView>
                             </subviews>
@@ -868,5 +868,6 @@
             </connections>
             <point key="canvasLocation" x="199" y="415"/>
         </window>
+        <customObject id="8Vr-Pg-hU7" customClass="TableViewController"/>
     </objects>
 </document>

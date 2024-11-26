@@ -12,20 +12,10 @@
 
 - (id)init {
     self = [super init];
-
-    NSLog(@"init: TableViewController");
-    
-    TableViewModel *model = [[TableViewModel alloc] init];
-    model.index = 1;
-    model.title = @"Title 1";
-    
-    _tableData = [[NSMutableArray alloc] init];
-    [_tableData addObject:model];
+    NSLog(@"init: MainWindowController");
 
     return self;
 }
-
-#pragma mark - Actions
 
 - (IBAction)addButtonClicked:(NSButton *)sender {
     NSLog(@"log: Add Button Clicked");
@@ -49,31 +39,6 @@
 
 - (IBAction)deleteButtonClicked:(NSButton *)sender {
     NSLog(@"deleteButtonClicked");
-}
-
-#pragma mark - Protocols
-
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return [_tableData count];
-}
-
-- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    NSString *identifier = tableColumn.identifier;
-    NSTableCellView *cell = [tableView makeViewWithIdentifier:identifier owner:self];
-    
-    if (_tableData) {
-        TableViewModel *modelOfRow = [_tableData objectAtIndex:row];
-        
-        if ([identifier isEqualToString:@"No"]) {
-            cell.textField.intValue = modelOfRow.index;
-        } else if ([identifier isEqualToString:@"Title"]) {
-            cell.textField.stringValue = modelOfRow.title;
-        } else {
-            cell.textField.stringValue = modelOfRow.dateString;
-        }
-    }
-    
-    return cell;
 }
 
 @end
