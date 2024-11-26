@@ -7,7 +7,11 @@
 
 #import "TVAddWindowController.h"
 
-@interface TVAddWindowController ()
+@interface TVAddWindowController () {
+    __weak IBOutlet NSButton *completeButton;
+}
+
+- (IBAction)completeButtonClicked:(NSButton *)sender;
 
 @end
 
@@ -28,6 +32,10 @@
 
 - (void)windowWillClose:(NSNotification *)notification {
     [self.delegate addWindowWillClose];
+}
+
+- (IBAction)completeButtonClicked:(NSButton *)sender {
+    NSLog(@"log : TVAddWindowController: Complete Button Clicked");
 }
 
 @end

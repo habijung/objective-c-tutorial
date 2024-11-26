@@ -17,6 +17,10 @@
     __weak IBOutlet NSButton *deleteButton;
 }
 
+- (IBAction)addButtonClicked:(NSButton *)sender;
+- (IBAction)showButtonClicked:(NSButton *)sender;
+- (IBAction)deleteButtonClicked:(NSButton *)sender;
+
 @end
 
 @implementation MainWindowController
@@ -29,7 +33,7 @@
 }
 
 - (IBAction)addButtonClicked:(NSButton *)sender {
-    NSLog(@"log: Add Button Clicked");
+    NSLog(@"log : MainWindowController: Add Button Clicked");
     
     if (!tvAddWindowController) {
         tvAddWindowController = [[TVAddWindowController alloc] initWithWindowNibName:[TVAddWindowController className]];
@@ -39,7 +43,7 @@
 }
 
 - (IBAction)showButtonClicked:(NSButton *)sender {
-    NSLog(@"log: Show Button Clicked");
+    NSLog(@"log : MainWindowController: Show Button Clicked");
     
     if (!tvShowWindowController) {
         tvShowWindowController = [[TVShowWindowController alloc] initWithWindowNibName:[TVShowWindowController className]];
@@ -49,7 +53,7 @@
 }
 
 - (IBAction)deleteButtonClicked:(NSButton *)sender {
-    NSLog(@"deleteButtonClicked");
+    NSLog(@"log : MainWindowController: Delete Button Clicked");
 }
 
 #pragma mark - TVAddWindowControllerDelegate

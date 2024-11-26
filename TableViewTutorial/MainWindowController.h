@@ -15,10 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MainWindowController : NSObject
 
-- (IBAction)addButtonClicked:(NSButton *)sender;
-- (IBAction)showButtonClicked:(NSButton *)sender;
-- (IBAction)deleteButtonClicked:(NSButton *)sender;
-
 @end
 
 NS_ASSUME_NONNULL_END
