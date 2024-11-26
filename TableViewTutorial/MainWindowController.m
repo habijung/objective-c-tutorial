@@ -91,6 +91,15 @@
 
 - (IBAction)deleteButtonClicked:(NSButton *)sender {
     NSLog(@"log: MainWindowController: Delete Button Clicked");
+    
+    if (tableView.selectedRow != -1) {
+        int tableViewIndex = (int)tableView.selectedRow;
+        NSLog(@"Table View Index: %i", tableViewIndex);
+        
+        // TODO: Reset remain objects index
+        [_tableViewData removeObjectAtIndex:tableViewIndex];
+        [tableView reloadData];
+    }
 }
 
 #pragma mark - TVAddWindowControllerDelegate
