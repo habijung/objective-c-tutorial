@@ -12,8 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TableViewController : NSObject <NSTableViewDataSource, NSTableViewDelegate>
 
-@property(nonatomic, strong) NSMutableArray *tableData;
-
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView;
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row;
 

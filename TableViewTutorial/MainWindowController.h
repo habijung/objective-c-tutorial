@@ -13,14 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MainWindowController : NSObject {
-    TVAddWindowController *tvAddWindowController;
-    TVShowWindowController *tvShowWindowController;
-    
-    __weak IBOutlet NSButton *addButton;
-    __weak IBOutlet NSButton *showButton;
-    __weak IBOutlet NSButton *deleteButton;
-}
+@interface MainWindowController : NSObject
 
 - (IBAction)addButtonClicked:(NSButton *)sender;
 - (IBAction)showButtonClicked:(NSButton *)sender;

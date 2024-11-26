@@ -8,6 +8,17 @@
 #import "MainWindowController.h"
 #import "TableViewModel.h"
 
+@interface MainWindowController () {
+    TVAddWindowController *tvAddWindowController;
+    TVShowWindowController *tvShowWindowController;
+    
+    __weak IBOutlet NSButton *addButton;
+    __weak IBOutlet NSButton *showButton;
+    __weak IBOutlet NSButton *deleteButton;
+}
+
+@end
+
 @implementation MainWindowController
 
 - (id)init {

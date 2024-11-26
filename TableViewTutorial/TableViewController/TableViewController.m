@@ -8,6 +8,12 @@
 #import "TableViewController.h"
 #import "TableViewModel.h"
 
+@interface TableViewController ()
+
+@property (nonatomic, strong) NSMutableArray *tableData;
+
+@end
+
 @implementation TableViewController
 
 - (id)init {
