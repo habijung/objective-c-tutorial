@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property int index;
 @property NSString *title;
+@property NSString *dateString;
 
 @end
 

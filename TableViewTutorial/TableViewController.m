@@ -16,8 +16,8 @@
     NSLog(@"init: TableViewController");
     
     TableViewModel *model = [[TableViewModel alloc] init];
-    model.index = 123;
-    model.title = @"Title 123";
+    model.index = 1;
+    model.title = @"Title 1";
     
     _tableData = [[NSMutableArray alloc] init];
     [_tableData addObject:model];
@@ -57,7 +57,7 @@
         } else if ([identifier isEqualToString:@"Title"]) {
             cell.textField.stringValue = modelOfRow.title;
         } else {
-            cell.textField.stringValue = @"Date";
+            cell.textField.stringValue = modelOfRow.dateString;
         }
     }
     
