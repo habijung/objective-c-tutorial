@@ -86,6 +86,8 @@
         if (!tvShowWindowController) {
             tvShowWindowController = [[TVShowWindowController alloc] initWithWindowNibName:[TVShowWindowController className]];
             tvShowWindowController.delegate = self;
+            
+            [tvShowWindowController showSelectedRow:@"AAA" content:@"BBB"];
             [tvShowWindowController showWindow:nil];
         }
     }

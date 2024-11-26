@@ -15,6 +15,9 @@
     __weak IBOutlet NSTextField *contentTextField;
 }
 
+@property (copy) NSString *titleCopiedString;
+@property (copy) NSString *contentCopiedString;
+
 - (IBAction)editButtonClicked:(NSButton *)sender;
 - (IBAction)closeButtonClicked:(NSButton *)sender;
 
@@ -33,10 +36,25 @@
     [super windowDidLoad];
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    if (_titleCopiedString) {
+        titleTextField.stringValue = _titleCopiedString;
+    }
+    
+    if (_contentCopiedString) {
+        contentTextField.stringValue = _contentCopiedString;
+    }
 }
 
 - (void)windowWillClose:(NSNotification *)notification {
     [self.delegate showWindowWillClose];
+    
+    _titleCopiedString = nil;
+    _contentCopiedString = nil;
+}
+
+- (void)showSelectedRow:(NSString *)title content:(NSString *)content {
+    _titleCopiedString = [title copy];
+    _contentCopiedString = [content copy];
 }
 
 - (IBAction)editButtonClicked:(NSButton *)sender {

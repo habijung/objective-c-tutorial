@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<TVShowWindowControllerDelegate> delegate;
 
+- (void)showSelectedRow:(NSString *)title content:(NSString *)content;
+
 @end
 
 NS_ASSUME_NONNULL_END
