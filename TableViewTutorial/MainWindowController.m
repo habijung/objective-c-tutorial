@@ -28,7 +28,13 @@
 #pragma mark - Actions
 
 - (IBAction)addButtonClicked:(NSButton *)sender {
-    NSLog(@"addButtonClicked");
+    NSLog(@"log: Add Button Clicked");
+    
+    if (!tvAddWindowController) {
+        tvAddWindowController = [[TVAddWindowController alloc] initWithWindowNibName:[TVAddWindowController className]];
+        
+        [tvAddWindowController showWindow:nil];
+    }
 }
 
 - (IBAction)showButtonClicked:(NSButton *)sender {

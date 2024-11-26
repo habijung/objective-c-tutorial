@@ -8,9 +8,13 @@
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
 
+#import "TVAddWindowController.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MainWindowController : NSObject <NSTableViewDataSource, NSTableViewDelegate> {
+    TVAddWindowController *tvAddWindowController;
+    
     __weak IBOutlet NSButton *addButton;
     __weak IBOutlet NSButton *showButton;
     __weak IBOutlet NSButton *deleteButton;

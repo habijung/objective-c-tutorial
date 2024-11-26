@@ -13,6 +13,13 @@
 
 @implementation TVAddWindowController
 
+- (id)init {
+    self = [super init];
+    NSLog(@"init: TVAddWindowController");
+    
+    return self;
+}
+
 - (void)windowDidLoad {
     [super windowDidLoad];
     
