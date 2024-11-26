@@ -15,9 +15,10 @@
     __weak IBOutlet NSButton *addButton;
     __weak IBOutlet NSButton *showButton;
     __weak IBOutlet NSButton *deleteButton;
+    __weak IBOutlet NSTableView *tableView;
 }
 
-@property (nonatomic, strong) NSMutableArray *tableData;
+@property (nonatomic, strong) NSMutableArray *tableViewData;
 
 - (IBAction)addButtonClicked:(NSButton *)sender;
 - (IBAction)showButtonClicked:(NSButton *)sender;
@@ -36,23 +37,23 @@
     model.title = @"Sample Title";
     model.content = @"Sample Content";
     
-    _tableData = [[NSMutableArray alloc] init];
-    [_tableData addObject:model];
+    _tableViewData = [[NSMutableArray alloc] init];
+    [_tableViewData addObject:model];
 
     return self;
 }
 
 #pragma mark - Table View Control
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return [_tableData count];
+    return [_tableViewData count];
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NSString *identifier = tableColumn.identifier;
     NSTableCellView *cell = [tableView makeViewWithIdentifier:identifier owner:self];
     
-    if (_tableData) {
-        TableViewModel *modelOfRow = [_tableData objectAtIndex:row];
+    if (_tableViewData) {
+        TableViewModel *modelOfRow = [_tableViewData objectAtIndex:row];
         
         if ([identifier isEqualToString:@"No"]) {
             cell.textField.intValue = modelOfRow.index;
@@ -110,7 +111,7 @@
     }
     
     TableViewModel *model = [[TableViewModel alloc] init];
-    model.index = (int)[_tableData count] + 1;
+    model.index = (int)[_tableViewData count] + 1;
     model.title = title;
     model.content = content;
     
@@ -128,7 +129,8 @@
     NSLog(@"New model content: %@", model.content);
     NSLog(@"New model date: %@", model.dateString);
     
-    [_tableData addObject:model];
+    [_tableViewData addObject:model];
+    [tableView reloadData];
 }
 
 @end

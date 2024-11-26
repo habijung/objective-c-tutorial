@@ -686,6 +686,7 @@
                 <outlet property="addButton" destination="bLd-Mo-2B0" id="a4u-Px-wmv"/>
                 <outlet property="deleteButton" destination="XjU-AO-bOq" id="jF6-fQ-BPo"/>
                 <outlet property="showButton" destination="SIT-5Y-GpL" id="Fqu-GR-Dlc"/>
+                <outlet property="tableView" destination="dpT-rX-FUW" id="2De-1s-0UQ"/>
             </connections>
         </customObject>
         <window title="Main Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">

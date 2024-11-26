@@ -20,7 +20,8 @@
     
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     
-    _dateString = [dateFormatter stringFromDate:date];
+//    _dateString = [dateFormatter stringFromDate:date];
+    _dateString = @"2024-01-01 12:31";
     
     return self;
 }
