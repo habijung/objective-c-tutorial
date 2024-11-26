@@ -38,7 +38,13 @@
 }
 
 - (IBAction)showButtonClicked:(NSButton *)sender {
-    NSLog(@"showButtonClicked");
+    NSLog(@"log: Show Button Clicked");
+    
+    if (!tvShowWindowController) {
+        tvShowWindowController = [[TVShowWindowController alloc] initWithWindowNibName:[TVShowWindowController className]];
+        
+        [tvShowWindowController showWindow:nil];
+    }
 }
 
 - (IBAction)deleteButtonClicked:(NSButton *)sender {

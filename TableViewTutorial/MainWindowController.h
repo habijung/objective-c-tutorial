@@ -9,11 +9,13 @@
 #import <Cocoa/Cocoa.h>
 
 #import "TVAddWindowController.h"
+#import "TVShowWindowController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MainWindowController : NSObject <NSTableViewDataSource, NSTableViewDelegate> {
     TVAddWindowController *tvAddWindowController;
+    TVShowWindowController *tvShowWindowController;
     
     __weak IBOutlet NSButton *addButton;
     __weak IBOutlet NSButton *showButton;
