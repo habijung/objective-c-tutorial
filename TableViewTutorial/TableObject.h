@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TableObject : NSObject
 
+@property int ID;
+@property NSString *title;
+
 @end
 
 NS_ASSUME_NONNULL_END

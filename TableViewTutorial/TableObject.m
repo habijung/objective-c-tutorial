@@ -9,4 +9,15 @@
 
 @implementation TableObject
 
+@synthesize ID, title;
+
+- (id)init
+{
+    self = [super self];
+    
+    NSLog(@"TableObject init");
+    
+    return self;
+}
+
 @end

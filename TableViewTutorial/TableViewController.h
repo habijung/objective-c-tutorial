@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
     __weak IBOutlet NSButton *deleteButton;
 }
 
+@property(nonatomic, strong) NSMutableArray *tableObjects;
+
 - (IBAction)addButtonClicked:(NSButton *)sender;
 - (IBAction)showButtonClicked:(NSButton *)sender;
 - (IBAction)deleteButtonClicked:(NSButton *)sender;
