@@ -9,7 +9,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TVShowWindowController : NSWindowController
+@protocol TVShowWindowControllerDelegate <NSObject>
+
+- (void)showWindowWillClose;
+
+@end
+
+@interface TVShowWindowController : NSWindowController <NSWindowDelegate>
+
+@property (nonatomic, weak) id<TVShowWindowControllerDelegate> delegate;
 
 @end
 

@@ -8,7 +8,7 @@
 #import "MainWindowController.h"
 #import "TableViewModel.h"
 
-@interface MainWindowController () <TVAddWindowControllerDelegate> {
+@interface MainWindowController () <TVAddWindowControllerDelegate, TVShowWindowControllerDelegate> {
     TVAddWindowController *tvAddWindowController;
     TVShowWindowController *tvShowWindowController;
     
@@ -84,7 +84,7 @@
     
     if (!tvShowWindowController) {
         tvShowWindowController = [[TVShowWindowController alloc] initWithWindowNibName:[TVShowWindowController className]];
-        
+        tvShowWindowController.delegate = self;
         [tvShowWindowController showWindow:nil];
     }
 }
@@ -144,6 +144,12 @@
     
     [_tableViewData addObject:model];
     [tableView reloadData];
+}
+
+#pragma mark - TVShowWindowControllerDelegate
+
+- (void)showWindowWillClose {
+    tvShowWindowController = nil;
 }
 
 @end
