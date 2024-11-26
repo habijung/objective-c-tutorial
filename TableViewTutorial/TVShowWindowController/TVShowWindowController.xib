@@ -8,6 +8,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TVShowWindowController">
             <connections>
+                <outlet property="contentTextField" destination="aXJ-xH-Rjt" id="g1P-fa-7q6"/>
+                <outlet property="titleTextField" destination="Wks-Te-sIN" id="zAI-zc-VDm"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>

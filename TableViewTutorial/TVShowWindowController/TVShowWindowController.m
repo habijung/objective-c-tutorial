@@ -11,7 +11,10 @@
     
     __weak IBOutlet NSButton *editButton;
     __weak IBOutlet NSButton *closeButton;
+    __weak IBOutlet NSTextField *titleTextField;
+    __weak IBOutlet NSTextField *contentTextField;
 }
+
 - (IBAction)editButtonClicked:(NSButton *)sender;
 - (IBAction)closeButtonClicked:(NSButton *)sender;
 

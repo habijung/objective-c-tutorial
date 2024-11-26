@@ -82,10 +82,12 @@
 - (IBAction)showButtonClicked:(NSButton *)sender {
     NSLog(@"log: MainWindowController: Show Button Clicked");
     
-    if (!tvShowWindowController) {
-        tvShowWindowController = [[TVShowWindowController alloc] initWithWindowNibName:[TVShowWindowController className]];
-        tvShowWindowController.delegate = self;
-        [tvShowWindowController showWindow:nil];
+    if (tableView.selectedRow != -1) {
+        if (!tvShowWindowController) {
+            tvShowWindowController = [[TVShowWindowController alloc] initWithWindowNibName:[TVShowWindowController className]];
+            tvShowWindowController.delegate = self;
+            [tvShowWindowController showWindow:nil];
+        }
     }
 }
 
