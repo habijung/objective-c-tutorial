@@ -9,7 +9,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TVAddWindowController : NSWindowController
+@protocol TVAddWindowControllerDelegate <NSObject>
+
+- (void)addWindowWillClose;
+
+@end
+
+@interface TVAddWindowController : NSWindowController <NSWindowDelegate>
+
+@property (nonatomic, weak) id<TVAddWindowControllerDelegate> delegate;
 
 @end
 

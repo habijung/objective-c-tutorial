@@ -8,7 +8,7 @@
 #import "MainWindowController.h"
 #import "TableViewModel.h"
 
-@interface MainWindowController () {
+@interface MainWindowController () <TVAddWindowControllerDelegate> {
     TVAddWindowController *tvAddWindowController;
     TVShowWindowController *tvShowWindowController;
     
@@ -33,7 +33,7 @@
     
     if (!tvAddWindowController) {
         tvAddWindowController = [[TVAddWindowController alloc] initWithWindowNibName:[TVAddWindowController className]];
-        
+        tvAddWindowController.delegate = self;
         [tvAddWindowController showWindow:nil];
     }
 }
@@ -50,6 +50,12 @@
 
 - (IBAction)deleteButtonClicked:(NSButton *)sender {
     NSLog(@"deleteButtonClicked");
+}
+
+#pragma mark - TVAddWindowControllerDelegate
+
+- (void)addWindowWillClose {
+    tvAddWindowController = nil;
 }
 
 @end

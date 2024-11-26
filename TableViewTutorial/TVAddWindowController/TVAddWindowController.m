@@ -26,4 +26,8 @@
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
 
+- (void)windowWillClose:(NSNotification *)notification {
+    [self.delegate addWindowWillClose];
+}
+
 @end
