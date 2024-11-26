@@ -70,6 +70,7 @@
     NSString *identifier = tableColumn.identifier;
     NSTableCellView *cell = [tableView makeViewWithIdentifier:identifier owner:self];
     
+    // TODO: Check NULL
     if ([identifier isEqualToString:@"No"])
     {
         cell.textField.stringValue = [_tableNo objectAtIndex:row];
