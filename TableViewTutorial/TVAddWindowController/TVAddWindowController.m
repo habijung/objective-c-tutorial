@@ -9,6 +9,8 @@
 
 @interface TVAddWindowController () {
     __weak IBOutlet NSButton *completeButton;
+    __weak IBOutlet NSTextField *titleTextField;
+    __weak IBOutlet NSTextField *contentTextField;
 }
 
 - (IBAction)completeButtonClicked:(NSButton *)sender;
@@ -37,10 +39,8 @@
 - (IBAction)completeButtonClicked:(NSButton *)sender {
     NSLog(@"log: TVAddWindowController: Complete Button Clicked");
     
-    // TODO: Get TextField string
-    
     // Send title and content to MainWindow
-    [self.delegate addWindowWillReturnTitle:@"Delegate title" content:@"Delegate content"];
+    [self.delegate addWindowWillSendTitle:titleTextField.stringValue content:contentTextField.stringValue];
     [self close];
 }
 

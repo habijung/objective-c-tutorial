@@ -9,6 +9,8 @@
         <customObject id="-2" userLabel="File's Owner" customClass="TVAddWindowController">
             <connections>
                 <outlet property="completeButton" destination="Q6s-pc-f7L" id="Euh-DK-LtN"/>
+                <outlet property="contentTextField" destination="Z8G-wl-WTD" id="fn6-fh-pc0"/>
+                <outlet property="titleTextField" destination="A8e-jf-xxs" id="oQ5-CE-08S"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
