@@ -10,16 +10,15 @@
 
 @implementation TableViewController
 
-@synthesize tableObjects;
-
 - (id)init
 {
     self = [super init];
 
     NSLog(@"TableViewController init");
     
+    /*
     // Create table objects array
-    tableObjects = [[NSMutableArray alloc] init];
+    _tableObjects = [[NSMutableArray alloc] init];
 
     // Create initial table object
     TableObject *object = [[TableObject alloc] init];
@@ -27,11 +26,22 @@
     object.title = @"Object 123";
 
     // Add object to array
-    [tableObjects addObject:object];
-    NSLog(@"%lu", (unsigned long)[tableObjects count]);
+    [_tableObjects addObject:object];
+     */
+    
+    // Test for Table View Cell
+    _tableNo = [[NSMutableArray alloc] init];
+    _tableTitle = [[NSMutableArray alloc] init];
+    _tableDate = [[NSMutableArray alloc] init];
+    
+    [_tableNo addObject:@"1"];
+    [_tableTitle addObject:@"Title 1"];
+    [_tableDate addObject:@"2024/11/19"];
 
     return self;
 }
+
+#pragma mark -
 
 - (IBAction)addButtonClicked:(NSButton *)sender
 {
@@ -46,6 +56,32 @@
 - (IBAction)deleteButtonClicked:(NSButton *)sender
 {
     NSLog(@"deleteButtonClicked");
+}
+
+#pragma mark -
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+{
+    return [_tableNo count];
+}
+
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    NSString *identifier = tableColumn.identifier;
+    NSTableCellView *cell = [tableView makeViewWithIdentifier:identifier owner:self];
+    
+    if ([identifier isEqualToString:@"No"])
+    {
+        cell.textField.stringValue = [_tableNo objectAtIndex:row];
+    } else if ([identifier isEqualToString:@"Title"])
+    {
+        cell.textField.stringValue = [_tableTitle objectAtIndex:row];
+    } else
+    {
+        cell.textField.stringValue = [_tableDate objectAtIndex:row];
+    }
+    
+    return cell;
 }
 
 @end

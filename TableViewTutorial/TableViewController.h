@@ -10,18 +10,26 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TableViewController : NSObject
+@interface TableViewController : NSObject <NSTableViewDataSource, NSTableViewDelegate>
 {
     __weak IBOutlet NSButton *addButton;
     __weak IBOutlet NSButton *showButton;
     __weak IBOutlet NSButton *deleteButton;
 }
 
-@property(nonatomic, strong) NSMutableArray *tableObjects;
+//@property(nonatomic, strong) NSMutableArray *tableObjects;
+@property(nonatomic, strong) NSMutableArray *tableNo;
+@property(nonatomic, strong) NSMutableArray *tableTitle;
+@property(nonatomic, strong) NSMutableArray *tableDate;
 
 - (IBAction)addButtonClicked:(NSButton *)sender;
 - (IBAction)showButtonClicked:(NSButton *)sender;
 - (IBAction)deleteButtonClicked:(NSButton *)sender;
+
+#pragma mark -
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView;
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row;
 
 @end
 
