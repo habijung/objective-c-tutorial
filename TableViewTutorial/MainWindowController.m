@@ -30,7 +30,6 @@
 
 - (id)init {
     self = [super init];
-    NSLog(@"init: MainWindowController");
     
     TableViewModel *model = [[TableViewModel alloc] init];
     model.index = 1;
@@ -70,8 +69,6 @@
 #pragma mark - Actions
 
 - (IBAction)addButtonClicked:(NSButton *)sender {
-    NSLog(@"log: MainWindowController: Add Button Clicked");
-    
     if (!tvAddWindowController) {
         tvAddWindowController = [[TVAddWindowController alloc] initWithWindowNibName:[TVAddWindowController className]];
         tvAddWindowController.delegate = self;
@@ -80,8 +77,6 @@
 }
 
 - (IBAction)showButtonClicked:(NSButton *)sender {
-    NSLog(@"log: MainWindowController: Show Button Clicked");
-    
     if (tableView.selectedRow != -1) {
         if (!tvShowWindowController) {
             tvShowWindowController = [[TVShowWindowController alloc] initWithWindowNibName:[TVShowWindowController className]];
@@ -97,8 +92,6 @@
 }
 
 - (IBAction)deleteButtonClicked:(NSButton *)sender {
-    NSLog(@"log: MainWindowController: Delete Button Clicked");
-    
     if (tableView.selectedRow != -1) {
         int tableViewIndex = (int)tableView.selectedRow;
         
@@ -120,8 +113,6 @@
 }
 
 - (void)addWindowWillSendTitle:(NSString *)title content:(NSString *)content {
-    NSLog(@"log: MainWindowController: addWindowWillSendTitle:content:");
-    
     if ([title isEqualToString:@""]) {
         title = @"(No Title)";
     }

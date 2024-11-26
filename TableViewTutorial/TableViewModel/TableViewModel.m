@@ -15,12 +15,10 @@
     NSLog(@"init: TableObject");
     
     // Get current date and time.
-    NSDate *date = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     
-//    _dateString = [dateFormatter stringFromDate:date];
     _dateString = @"2024-01-01 12:31";
     
     return self;

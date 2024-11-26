@@ -27,7 +27,6 @@
 
 - (id)init {
     self = [super init];;
-    NSLog(@"init: TVShowWindowController");
     
     return self;
 }
@@ -57,8 +56,6 @@
 }
 
 - (IBAction)editButtonClicked:(NSButton *)sender {
-    NSLog(@"log: TVShowWindowController: editButtonClicked:");
-    
     // Sent title, content, date string to Main Window
     [self.delegate showWindowWillSendTitle:titleTextField.stringValue content:contentTextField.stringValue];
     [self close];
