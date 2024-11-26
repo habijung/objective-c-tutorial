@@ -49,7 +49,7 @@
     NSString *identifier = tableColumn.identifier;
     NSTableCellView *cell = [tableView makeViewWithIdentifier:identifier owner:self];
     
-    if (!_tableData) {
+    if (_tableData) {
         TableViewModel *modelOfRow = [_tableData objectAtIndex:row];
         
         if ([identifier isEqualToString:@"No"]) {
