@@ -16,11 +16,11 @@
     
     // Get current date and time.
     NSDate *date = [NSDate date];
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     
-    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm"];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     
-    _dateString = [dateFormat stringFromDate:date];
+    _dateString = [dateFormatter stringFromDate:date];
     
     return self;
 }

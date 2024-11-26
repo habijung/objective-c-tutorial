@@ -109,8 +109,26 @@
         content = @"(No Content)";
     }
     
-    NSLog(@"%@", title);
-    NSLog(@"%@", content);
+    TableViewModel *model = [[TableViewModel alloc] init];
+    model.index = (int)[_tableData count] + 1;
+    model.title = title;
+    model.content = content;
+    
+    // TODO: Create date string method
+    NSDate *date = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    
+    model.dateString = [dateFormatter stringFromDate:date];
+    
+    // TODO: Create print model method
+    NSLog(@"New model index: %i", model.index);
+    NSLog(@"New model title: %@", model.title);
+    NSLog(@"New model content: %@", model.content);
+    NSLog(@"New model date: %@", model.dateString);
+    
+    [_tableData addObject:model];
 }
 
 @end
