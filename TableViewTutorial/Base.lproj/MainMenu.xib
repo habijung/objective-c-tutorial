@@ -19,7 +19,7 @@
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <customObject id="jpv-Yb-n5d" customClass="TableViewController">
+        <customObject id="jpv-Yb-n5d" customClass="MainWindowController">
             <connections>
                 <outlet property="addButton" destination="bLd-Mo-2B0" id="a4u-Px-wmv"/>
                 <outlet property="deleteButton" destination="XjU-AO-bOq" id="jF6-fQ-BPo"/>

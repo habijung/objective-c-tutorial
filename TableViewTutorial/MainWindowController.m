@@ -1,14 +1,14 @@
 //
-//  TableViewController.m
+//  MainWindowController.m
 //  TableViewTutorial
 //
 //  Created by 정하빈 on 11/18/24.
 //
 
-#import "TableViewController.h"
-#import "Model/TableViewModel.h"
+#import "MainWindowController.h"
+#import "TableViewModel.h"
 
-@implementation TableViewController
+@implementation MainWindowController
 
 - (id)init {
     self = [super init];
