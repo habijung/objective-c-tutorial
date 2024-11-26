@@ -1,5 +1,5 @@
 //
-//  TableObject.h
+//  TableViewModel.h
 //  TableViewTutorial
 //
 //  Created by 정하빈 on 11/18/24.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TableObject : NSObject
+@interface TableViewModel : NSObject
 
 @property int ID;
 @property NSString *title;

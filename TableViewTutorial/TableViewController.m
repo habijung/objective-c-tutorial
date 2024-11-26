@@ -6,7 +6,7 @@
 //
 
 #import "TableViewController.h"
-#import "TableObject.h"
+#import "TableViewModel.h"
 
 @implementation TableViewController
 
@@ -21,7 +21,7 @@
     _tableObjects = [[NSMutableArray alloc] init];
 
     // Create initial table object
-    TableObject *object = [[TableObject alloc] init];
+    TableViewModel *object = [[TableViewModel alloc] init];
     object.ID = 123;
     object.title = @"Object 123";
 
